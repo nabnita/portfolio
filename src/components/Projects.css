@@ -1,0 +1,101 @@
+.projects-section-container {
+    position: relative;
+}
+
+.glow-sphere {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(125, 207, 255, 0.08) 0%, rgba(26, 27, 38, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project-card .project-preview {
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    font-size: 0.8rem;
+    color: var(--accent-primary);
+    background-color: rgba(125, 207, 255, 0.1);
+    border: 1px solid rgba(125, 207, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--accent-secondary);
+    font-weight: 500;
+    margin-top: auto;
+}
+
+/* Modal specific styles */
+.modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-subtitle {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.modal-body h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-body h3:first-child {
+    margin-top: 0;
+}
+
+.metrics-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.metrics-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.metrics-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-secondary);
+}

@@ -1,0 +1,128 @@
+:root {
+  /* Tokyo Night Theme */
+  --bg-primary: #1a1b26;
+  /* Deep Night Blue */
+  --bg-secondary: #24283b;
+  /* Lighter Night Blue */
+  --bg-card: #24283b;
+  /* Card Background */
+
+  --text-primary: #c0caf5;
+  /* Moonlight White */
+  --text-secondary: #a9b1d6;
+  /* Storm Grey */
+
+  --accent-primary: #7dcfff;
+  /* Cyan */
+  --accent-secondary: #bb9af7;
+  /* Purple */
+  --accent-tertiary: #9ece6a;
+  /* Green (for success/metrics) */
+
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+:root[data-theme="light"] {
+  /* Light Mode (Clean Professional) */
+  --bg-primary: #f8fafc;
+  /* Slate-50 */
+  --bg-secondary: #ffffff;
+  /* White */
+  --bg-card: #ffffff;
+
+  --text-primary: #1e293b;
+  /* Slate-800 */
+  --text-secondary: #475569;
+  /* Slate-600 */
+  --text-tertiary: #94a3b8;
+
+  --accent-primary: #0284c7;
+  /* Sky-600 */
+  --accent-secondary: #7c3aed;
+  /* Violet-600 */
+  --accent-tertiary: #059669;
+  /* Emerald-600 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  cursor: auto !important;
+  /* Force visibility */
+}
+
+/* Ensure interactive elements have pointers */
+a,
+button {
+  cursor: pointer !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+/* Navigation Dots */
+.nav-dots {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 50;
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+  background-color: var(--accent-primary);
+  opacity: 1;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.nav-dot:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .nav-dots {
+    display: none;
+  }
+}

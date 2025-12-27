@@ -1,0 +1,76 @@
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+}
+
+.edu-card {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 4px solid var(--accent-primary);
+    /* shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+    transform: translateX(10px);
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.degree {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.edu-duration {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    white-space: nowrap;
+    background: rgba(125, 207, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 100px;
+}
+
+.school {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.edu-footer {
+    display: flex;
+    gap: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.location,
+.grade {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .edu-header {
+        flex-direction: column;
+    }
+}

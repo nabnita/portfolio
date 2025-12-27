@@ -1,0 +1,59 @@
+.timeline {
+    position: relative;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    margin-left: 20px;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -49px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--bg-primary);
+    border: 2px solid var(--accent-primary);
+    border-radius: 50%;
+}
+
+.date {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.role {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.company {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.description {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.achievements {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.achievements li {
+    margin-bottom: 0.5rem;
+}
