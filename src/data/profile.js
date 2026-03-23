@@ -2,6 +2,7 @@ export const profileData = {
     name: "Nabnita Singh",
     title: "AI / ML Engineer",
     tagline: "NLP • Generative AI • Scalable Systems",
+    summary: "I am a passionate Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning at Lovely Professional University, with a strong foundation in programming and problem-solving. I have hands-on experience in developing intelligent systems, including machine learning–based solutions for crop recommendation and land analysis, achieving high accuracy through optimized models and real-time deployment. During my internship at Infosys Springboard, I worked on image recognition and data analysis, improving model performance and gaining practical exposure to real-world AI applications. Proficient in technologies such as Java, Python, React, TensorFlow, and Django, I enjoy building scalable and impactful solutions. Beyond technical skills, I bring strong analytical thinking, adaptability, and leadership experience through academic projects, training, and extracurricular involvement. I am eager to leverage my skills to contribute to innovative, data-driven solutions in the field of AI and software development.",
     contact: {
         email: "nabnitasingh082005@gmail.com",
         linkedin: "https://www.linkedin.com/in/nabnita8",

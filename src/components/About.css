@@ -7,11 +7,14 @@
     display: inline-block;
 }
 
+/* Center the underline */
 .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Move back by 50% of its own width */
     width: 60px;
     height: 4px;
     background-color: var(--accent-primary);
@@ -20,6 +23,12 @@
 
 .about-content {
     max-width: 800px;
+    width: 100%;
+    text-align: center;
+    /* Enforce center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-text {
@@ -27,4 +36,9 @@
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 1.5rem;
+}
+
+.about-stats-grid {
+    width: 100%;
+    justify-content: center;
 }

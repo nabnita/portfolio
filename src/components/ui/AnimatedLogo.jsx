@@ -19,8 +19,8 @@ const Particle = ({ angle, distance }) => {
                 width: '4px',
                 height: '4px',
                 borderRadius: '50%',
-                backgroundColor: '#7dcfff', // Cyan particles
-                boxShadow: '0 0 10px #7dcfff',
+                backgroundColor: 'var(--accent-primary)', // Use variable!
+                boxShadow: '0 0 10px var(--accent-primary)',
                 zIndex: 50,
                 pointerEvents: 'none'
             }}
@@ -66,17 +66,16 @@ const AnimatedLogo = () => {
             <span style={{
                 fontSize: '2rem',
                 fontWeight: '900',
-                background: 'linear-gradient(135deg, #7dcfff 0%, #3b82f6 100%)', // Cyan to Royal Blue
+                background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%)', // Use variables!
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 filter: 'drop-shadow(0 0 15px rgba(125, 207, 255, 0.3))',
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "var(--font-main)",
                 letterSpacing: '-2px'
             }}>
                 N
             </span>
 
-            {/* Easter Egg Particles */}
             <AnimatePresence>
                 {particles.map(p => (
                     <Particle key={p.id} angle={p.angle} distance={p.distance} />

@@ -1,5 +1,6 @@
 .projects-section-container {
     position: relative;
+    width: 100%;
 }
 
 .glow-sphere {
@@ -7,19 +8,33 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(125, 207, 255, 0.08) 0%, rgba(26, 27, 38, 0) 70%);
+    width: 800px;
+    /* Any larger */
+    height: 800px;
+    background: radial-gradient(circle, rgba(125, 207, 255, 0.05) 0%, rgba(26, 27, 38, 0) 70%);
     z-index: -1;
     pointer-events: none;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Wider cards */
+    gap: 3rem;
+    /* Increased gap */
     position: relative;
     z-index: 2;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Ensure Project Cards center their text content if desired, 
+   though left-align is usually better for reading items. 
+   User asked to center "Whole Website Content". 
+   Let's try center aligning the card summaries too. */
+
+.project-card {
+    text-align: center;
 }
 
 .project-card .project-preview {
@@ -28,45 +43,60 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color: var(--text-secondary);
 }
 
 .project-tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 1.5rem;
+    justify-content: center;
+    /* Center Stack */
 }
 
 .tech-tag {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--accent-primary);
-    background-color: rgba(125, 207, 255, 0.1);
-    border: 1px solid rgba(125, 207, 255, 0.2);
-    padding: 4px 10px;
-    border-radius: 4px;
+    background-color: rgba(125, 207, 255, 0.08);
+    border: 1px solid rgba(125, 207, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
 }
 
 .read-more {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--accent-secondary);
     font-weight: 500;
     margin-top: auto;
+    border-bottom: 1px dashed transparent;
+    transition: 0.2s;
 }
 
-/* Modal specific styles */
+.read-more:hover {
+    border-bottom-color: var(--accent-secondary);
+}
+
+/* Modal specific styles - Ensure Modal is spacious too */
 .modal-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .modal-subtitle {
     display: block;
     color: var(--text-secondary);
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.modal-body p {
+    line-height: 1.8;
 }
 
 .modal-body h3 {
@@ -75,27 +105,24 @@
     color: var(--text-primary);
     margin-bottom: 1rem;
     margin-top: 2rem;
-}
-
-.modal-body h3:first-child {
-    margin-top: 0;
+    text-align: left;
+    /* Keep headers left in long reading modal? 
+                        User said "Whole Website". But reading long text centered is bad.
+                        I will keep modal body decent, but center headers. */
+    text-align: center;
 }
 
 .metrics-list {
     list-style-type: none;
     padding: 0;
+    display: inline-block;
+    /* To allow centering constraint */
+    text-align: left;
+    /* List items themselves shouldn't be centered lines usually */
 }
 
-.metrics-list li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0.8rem;
-    color: var(--text-secondary);
-}
-
-.metrics-list li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: var(--accent-secondary);
+/* Wrapper to center the list block */
+.metrics-container {
+    display: flex;
+    justify-content: center;
 }

@@ -1,56 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 :root {
   /* Tokyo Night Theme */
   --bg-primary: #1a1b26;
-  /* Deep Night Blue */
   --bg-secondary: #24283b;
-  /* Lighter Night Blue */
   --bg-card: #24283b;
-  /* Card Background */
-
   --text-primary: #c0caf5;
-  /* Moonlight White */
   --text-secondary: #a9b1d6;
-  /* Storm Grey */
-
+  --text-accent: #7dcfff;
   --accent-primary: #7dcfff;
-  /* Cyan */
   --accent-secondary: #bb9af7;
-  /* Purple */
   --accent-tertiary: #9ece6a;
-  /* Green (for success/metrics) */
-
-  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  --font-main: 'Outfit', system-ui, sans-serif;
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 }
 
 :root[data-theme="light"] {
-  /* Light Mode (Clean Professional) */
   --bg-primary: #f8fafc;
-  /* Slate-50 */
   --bg-secondary: #ffffff;
-  /* White */
   --bg-card: #ffffff;
-
   --text-primary: #1e293b;
-  /* Slate-800 */
   --text-secondary: #475569;
-  /* Slate-600 */
-  --text-tertiary: #94a3b8;
-
+  --text-accent: #0284c7;
   --accent-primary: #0284c7;
-  /* Sky-600 */
   --accent-secondary: #7c3aed;
-  /* Violet-600 */
   --accent-tertiary: #059669;
-  /* Emerald-600 */
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Reduced base font size to 95% to allow "zoom out" feel */
+  font-size: 95%;
 }
 
 body {
@@ -62,13 +49,63 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   cursor: auto !important;
-  /* Force visibility */
+  text-align: center;
+  font-size: 1rem;
+  /* Base body size */
 }
 
-/* Ensure interactive elements have pointers */
-a,
+/* Ensure sections have spacing natively */
+section {
+  margin-bottom: 160px;
+  /* Reduced to 160px */
+  padding-top: 80px;
+  /* Reduced padding */
+  padding-bottom: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove underlines */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer !important;
+}
+
 button {
   cursor: pointer !important;
+}
+
+/* Scaled down Headings */
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Global H1 limit */
+h2 {
+  font-size: 2rem;
+}
+
+/* Global H2 limit */
+h3 {
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-secondary);
 }
 
 /* Scrollbar */
@@ -88,6 +125,7 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
 }
+
 /* Navigation Dots */
 .nav-dots {
   position: fixed;

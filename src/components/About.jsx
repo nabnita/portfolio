@@ -3,7 +3,6 @@ import Section from './ui/Section';
 import { profileData } from '../data/profile';
 import './About.css';
 
-// Container handles the group entrance and staggers children
 const containerVariants = {
     hidden: {
         opacity: 0,
@@ -19,7 +18,6 @@ const containerVariants = {
     }
 };
 
-// Items inherit 'hidden'/'visible' from container
 const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -32,14 +30,18 @@ const itemVariants = {
 const About = () => {
     return (
         <Section id="about" className="about-section">
-            {/* 
-         Converted to motion.div to participate in the variant chain.
-         Inherits 'hidden'/'visible' from Section.
-      */}
             <motion.div
                 className="about-content"
                 variants={containerVariants}
-            // initial/whileInView are managed by parent Section
+                // Strict Inline Styles to guarantee centering regardless of CSS
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    width: '100%'
+                }}
             >
                 <motion.h2 variants={itemVariants} className="section-title">
                     About Me
@@ -48,7 +50,7 @@ const About = () => {
                 <motion.div
                     variants={itemVariants}
                     className="about-text-container"
-                    style={{ marginBottom: '3rem' }}
+                    style={{ marginBottom: '4rem', maxWidth: '800px', lineHeight: '1.8' }}
                 >
                     <p className="about-text">
                         {profileData.summary}
@@ -57,24 +59,22 @@ const About = () => {
 
                 <motion.div
                     className="about-stats-grid"
-                    variants={itemVariants} // Treat the whole grid as one item, or stagger internal?
-                    // Let's treat grid as one item for simplicity, or add another stagger level.
-                    // For now, simple slide up.
-                    style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap' }}
+                    variants={itemVariants}
+                    style={{ display: 'flex', gap: '5rem', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}
                 >
                     <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-primary)' }}>2+</span>
-                        <span style={{ color: 'var(--text-secondary)' }}>Years Exp</span>
+                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-primary)', marginBottom: '0.5rem' }}>2+</span>
+                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Years Exp</span>
                     </div>
 
                     <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-secondary)' }}>10+</span>
-                        <span style={{ color: 'var(--text-secondary)' }}>Projects</span>
+                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-secondary)', marginBottom: '0.5rem' }}>10+</span>
+                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Projects</span>
                     </div>
 
                     <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '2.5rem', fontWeight: '800', color: 'var(--accent-tertiary)' }}>100%</span>
-                        <span style={{ color: 'var(--text-secondary)' }}>Committed</span>
+                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-tertiary)', marginBottom: '0.5rem' }}>100%</span>
+                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Committed</span>
                     </div>
                 </motion.div>
             </motion.div>
