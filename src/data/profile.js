@@ -76,12 +76,14 @@ export const profileData = {
         {
             name: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
             issuer: "Oracle",
-            date: "Oct 2025"
+            date: "Oct 2025",
+            link: "https://drive.google.com/file/d/17ZfJYQJcZlMtxAx2nm7JZyPLRPWZP-Lh/view?usp=sharing"
         },
         {
             name: "Oracle Cloud Infrastructure 2025 Certified AI foundations Associate",
             issuer: "Oracle",
-            date: "July 2025"
+            date: "July 2025",
+            link: "https://drive.google.com/file/d/1v1mmf5ONavng9xO94uWTEF0oxkHhJPeT/view?usp=sharing"
         }
     ]
 };

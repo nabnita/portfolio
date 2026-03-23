@@ -27,7 +27,7 @@ const Hero = () => {
 
                         <div className="hero-actions" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'flex-start' }}>
                             <a href="#projects" className="btn btn-primary" style={{ padding: '16px 36px', background: 'var(--accent-primary)', color: '#000', borderRadius: '50px', fontWeight: '700', fontSize: '1.1rem' }}>View Projects</a>
-                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 36px', border: '1px solid var(--text-secondary)', borderRadius: '50px', fontWeight: '700', fontSize: '1.1rem' }}>Resume</a>
+                            <a href="https://drive.google.com/file/d/1otc1uutsmmheT0_Vbsjaj-TnK-wKJ3FQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 36px', border: '1px solid var(--text-secondary)', borderRadius: '50px', fontWeight: '700', fontSize: '1.1rem' }}>Resume</a>
                         </div>
                     </div>
                 </motion.div>
