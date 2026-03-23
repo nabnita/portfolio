@@ -11,6 +11,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import LoadingScreen from './components/ui/LoadingScreen';
 import AmbientBackground from './components/ui/AmbientBackground';
+import GlobalTimeline from './components/ui/GlobalTimeline';
 import './index.css';
 
 const SECTIONS = [
@@ -89,17 +90,8 @@ function App() {
                         <Contact />
                     </main>
 
-                    {/* Navigation Dots */}
-                    <div className="nav-dots">
-                        {SECTIONS.map((section) => (
-                            <div
-                                key={section.id}
-                                className={`nav-dot ${activeSection === section.id ? 'active' : ''}`}
-                                onClick={() => scrollToSection(section.id)}
-                                title={section.id.charAt(0).toUpperCase() + section.id.slice(1)}
-                            />
-                        ))}
-                    </div>
+                    {/* Left Sidebar Timeline */}
+                    <GlobalTimeline sections={SECTIONS} activeSection={activeSection} />
                 </>
             )}
         </div>

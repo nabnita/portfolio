@@ -40,6 +40,7 @@ export const profileData = {
                 "Achieved 93%+ classification accuracy through feature optimization and ensemble tuning",
                 "Enabled transparent predictions with sustainability and soil improvement guidance"
             ],
+            github: "https://github.com/nabnita/agronomist",
             link: "#"
         },
         {
@@ -52,6 +53,7 @@ export const profileData = {
                 "Attained 92%+ accuracy through optimized preprocessing",
                 "Deployed scalable backend enabling real-time prediction"
             ],
+            github: "https://github.com/nabnita/land-intelligence-ai",
             link: "#"
         }
     ],
@@ -59,7 +61,7 @@ export const profileData = {
         {
             degree: "B.Tech in Computer Science (Artificial Intelligence and Machine Learning)",
             school: "Lovely Professional University",
-            location: "Phagwara, Punjab",
+            location: "Phagwara, Punjab | CGPA: 7.49",
             duration: "Aug 2023 – Present"
         },
         {

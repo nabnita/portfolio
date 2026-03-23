@@ -4,26 +4,19 @@ import { profileData } from '../data/profile';
 import './About.css';
 
 const containerVariants = {
-    hidden: {
-        opacity: 0,
-        transition: { staggerChildren: 0.1 }
-    },
+    hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: {
-            staggerChildren: 0.2,
-            delayChildren: 0.1,
-            when: "beforeChildren"
-        }
+        transition: { staggerChildren: 0.2, delayChildren: 0.1 }
     }
 };
 
 const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 25 },
     visible: {
-        opacity: 1,
+        opacity: 1, 
         y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } // Smooth premium easing
     }
 };
 
@@ -33,7 +26,9 @@ const About = () => {
             <motion.div
                 className="about-content"
                 variants={containerVariants}
-                // Strict Inline Styles to guarantee centering regardless of CSS
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }} // Trigger when 30% of section is visible
                 style={{
                     display: 'flex',
                     flexDirection: 'column',

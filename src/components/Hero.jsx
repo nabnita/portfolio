@@ -11,7 +11,7 @@ const Hero = () => {
         <Section id="hero" className="hero-section-wrapper">
             <NeuralBackground />
 
-            <div className="hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '2rem', width: '100%', flexWrap: 'wrap' }}>
+            <div className="hero-container">
                 {/* Left: Text Content */}
                 <motion.div
                     className="hero-content"
@@ -21,15 +21,13 @@ const Hero = () => {
                     style={{ textAlign: 'left', flex: '1', minWidth: '300px' }}
                 >
                     <div style={{ textAlign: 'left' }}>
-                        <span className="hero-greeting" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1rem', color: 'var(--accent-primary)' }}>Hello, I'm</span>
-                        {/* Reduced from 4rem to 3rem */}
-                        <h1 className="hero-name" style={{ fontSize: '3rem', fontWeight: '800', lineHeight: '1.1', marginBottom: '0.8rem' }}>{profileData.name}</h1>
-                        {/* Reduced from 2rem to 1.5rem */}
-                        <h2 className="hero-title" style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', marginBottom: '1.2rem' }}>{profileData.title}</h2>
+                        <span className="hero-greeting" style={{ display: 'block', marginBottom: '1rem', fontSize: '2rem', color: 'var(--accent-primary)' }}>Hello, I'm</span>
+                        <h1 className="hero-name" style={{ fontSize: '4rem', fontWeight: '800', lineHeight: '1', marginBottom: '1rem' }}>{profileData.name}</h1>
+                        <h2 className="hero-title" style={{ fontSize: '2.5rem', color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>{profileData.title}</h2>
 
-                        <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
-                            <a href="#projects" className="btn btn-primary" style={{ padding: '10px 24px', background: 'var(--accent-primary)', color: '#000', borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem' }}>View Projects</a>
-                            <a href="#contact" className="btn btn-secondary" style={{ padding: '10px 24px', border: '1px solid var(--text-secondary)', borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem' }}>Contact Me</a>
+                        <div className="hero-actions" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'flex-start' }}>
+                            <a href="#projects" className="btn btn-primary" style={{ padding: '16px 36px', background: 'var(--accent-primary)', color: '#000', borderRadius: '50px', fontWeight: '700', fontSize: '1.1rem' }}>View Projects</a>
+                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '16px 36px', border: '1px solid var(--text-secondary)', borderRadius: '50px', fontWeight: '700', fontSize: '1.1rem' }}>Resume</a>
                         </div>
                     </div>
                 </motion.div>

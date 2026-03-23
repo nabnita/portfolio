@@ -1,0 +1,101 @@
+.global-timeline-container {
+    position: fixed;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    height: 70vh;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+    pointer-events: none; /* Let clicks pass through except on nodes */
+}
+
+/* Background track */
+.timeline-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+/* Filled track based on scroll */
+.timeline-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(125, 207, 255, 0.4);
+    z-index: 1;
+}
+
+/* Nodes container */
+.timeline-nodes {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Wrapper for node clicks */
+.timeline-node-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* The physical node dot */
+.timeline-node {
+    width: 8px;
+    height: 8px;
+    background-color: var(--bg-primary);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-node-wrapper:hover .timeline-node {
+    border-color: var(--accent-primary);
+    transform: scale(1.2);
+}
+
+.timeline-node-wrapper.active .timeline-node {
+    border-color: var(--accent-primary);
+    background-color: var(--accent-primary);
+}
+
+/* The glow for active nodes */
+.timeline-node-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: radial-gradient(circle, rgba(125, 207, 255, 0.6) 0%, rgba(125, 207, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Hide on mobile for better reading space, or push it further edge */
+@media (max-width: 768px) {
+    .global-timeline-container {
+        left: 10px;
+    }
+}
