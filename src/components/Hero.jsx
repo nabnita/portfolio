@@ -11,7 +11,7 @@ const Hero = () => {
         <Section id="hero" className="hero-section-wrapper">
             <NeuralBackground />
 
-            <div className="hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3rem', width: '100%', flexWrap: 'wrap' }}>
+            <div className="hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '2rem', width: '100%', flexWrap: 'wrap' }}>
                 {/* Left: Text Content */}
                 <motion.div
                     className="hero-content"
@@ -20,16 +20,14 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     style={{ textAlign: 'left', flex: '1', minWidth: '300px' }}
                 >
-                    <div style={{ textAlign: 'center' }}>
-                        <span className="hero-greeting" style={{ display: 'block', marginBottom: '0.8rem', fontSize: '1rem', color: 'var(--accent-primary)' }}>Hello, I'm</span>
+                    <div style={{ textAlign: 'left' }}>
+                        <span className="hero-greeting" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1rem', color: 'var(--accent-primary)' }}>Hello, I'm</span>
                         {/* Reduced from 4rem to 3rem */}
                         <h1 className="hero-name" style={{ fontSize: '3rem', fontWeight: '800', lineHeight: '1.1', marginBottom: '0.8rem' }}>{profileData.name}</h1>
                         {/* Reduced from 2rem to 1.5rem */}
                         <h2 className="hero-title" style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', marginBottom: '1.2rem' }}>{profileData.title}</h2>
-                        {/* Reduced from 1.2rem to 1rem */}
-                        <p className="hero-tagline" style={{ fontSize: '1rem', maxWidth: '550px', margin: '0 auto 1.5rem', color: 'var(--text-secondary)' }}>{profileData.tagline}</p>
 
-                        <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                        <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
                             <a href="#projects" className="btn btn-primary" style={{ padding: '10px 24px', background: 'var(--accent-primary)', color: '#000', borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem' }}>View Projects</a>
                             <a href="#contact" className="btn btn-secondary" style={{ padding: '10px 24px', border: '1px solid var(--text-secondary)', borderRadius: '50px', fontWeight: '600', fontSize: '0.9rem' }}>Contact Me</a>
                         </div>
@@ -42,7 +40,7 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    style={{ flex: '1', display: 'flex', justifyContent: 'center' }}
+                    style={{ flex: '1', display: 'flex', justifyContent: 'flex-start' }}
                 >
                     <InteractiveShape />
                 </motion.div>

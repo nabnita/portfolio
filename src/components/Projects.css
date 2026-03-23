@@ -19,28 +19,22 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    /* Wider cards */
-    gap: 3rem;
-    /* Increased gap */
+    gap: 1.5rem;
     position: relative;
     z-index: 2;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-/* Ensure Project Cards center their text content if desired, 
-   though left-align is usually better for reading items. 
-   User asked to center "Whole Website Content". 
-   Let's try center aligning the card summaries too. */
-
 .project-card {
-    text-align: center;
+    text-align: left;
 }
 
 .project-card .project-preview {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     color: var(--text-secondary);
@@ -49,10 +43,9 @@
 .project-tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-    justify-content: center;
-    /* Center Stack */
+    gap: 8px;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
 }
 
 .tech-tag {

@@ -37,46 +37,26 @@ const About = () => {
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    textAlign: 'center',
+                    alignItems: 'flex-start',
+                    justifyContent: 'flex-start',
+                    textAlign: 'left',
                     width: '100%'
                 }}
             >
-                <motion.h2 variants={itemVariants} className="section-title">
+                <motion.h2 variants={itemVariants} className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>
                     About Me
                 </motion.h2>
 
                 <motion.div
                     variants={itemVariants}
                     className="about-text-container"
-                    style={{ marginBottom: '4rem', maxWidth: '800px', lineHeight: '1.8' }}
+                    style={{ marginBottom: '2rem', maxWidth: '800px', lineHeight: '1.8' }}
                 >
                     <p className="about-text">
                         {profileData.summary}
                     </p>
                 </motion.div>
 
-                <motion.div
-                    className="about-stats-grid"
-                    variants={itemVariants}
-                    style={{ display: 'flex', gap: '5rem', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}
-                >
-                    <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-primary)', marginBottom: '0.5rem' }}>2+</span>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Years Exp</span>
-                    </div>
-
-                    <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-secondary)', marginBottom: '0.5rem' }}>10+</span>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Projects</span>
-                    </div>
-
-                    <div className="stat-item">
-                        <span style={{ display: 'block', fontSize: '3rem', fontWeight: '800', color: 'var(--accent-tertiary)', marginBottom: '0.5rem' }}>100%</span>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Committed</span>
-                    </div>
-                </motion.div>
             </motion.div>
         </Section>
     );

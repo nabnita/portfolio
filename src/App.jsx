@@ -13,12 +13,12 @@ import LoadingScreen from './components/ui/LoadingScreen';
 import AmbientBackground from './components/ui/AmbientBackground';
 import './index.css';
 
-// Component mapping 
 const SECTIONS = [
     { id: 'hero', component: Hero },
     { id: 'about', component: About },
     { id: 'projects', component: Projects },
     { id: 'experience', component: Experience },
+    { id: 'certifications', component: Certifications },
     { id: 'education', component: Education },
     { id: 'skills', component: Skills },
     { id: 'contact', component: Contact }

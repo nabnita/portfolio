@@ -49,23 +49,24 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   cursor: auto !important;
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
-  /* Base body size */
 }
 
 /* Ensure sections have spacing natively */
 section {
-  margin-bottom: 160px;
-  /* Reduced to 160px */
-  padding-top: 80px;
-  /* Reduced padding */
-  padding-bottom: 80px;
-  min-height: 100vh;
+  margin-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Remove underlines */

@@ -14,31 +14,31 @@ export const profileData = {
         languages: ["Java", "Python", "C++", "SQL", "JavaScript"],
         frameworks: ["Django", "React", "Flask", "Node.js", "LangChain", "TensorFlow", "Fast-API"],
         tools: ["Git", "VS Code", "Docker", "Firebase", "Postman", "Kaggle", "Hugging Face"],
-        soft: ["Problem-Solving", "Logical Reasoning", "Adaptability", "Analytical Thinking"]
+        soft: ["Problem-Solving", "Leadership", "Adaptability", "Analytical Thinking"]
     },
     experience: [
         {
             role: "Machine Learning Intern",
-            company: "SkillCraft Technology",
-            duration: "Jun 2025 - July 2025",
-            description: "Assisted in the development of a supervised learning model leveraging image recognition.",
+            company: "Infosys Springboard",
+            duration: "Jan 2026",
+            description: "Machine Learning Intern",
             achievements: [
-                "Boosted product defect detection accuracy by 30%.",
-                "Conducted in-depth analysis of large datasets to extract key performance indicators.",
-                "Implemented a scalable data preprocessing pipeline, improving data quality and cutting preprocessing time by 20%."
+                "Assisted in the development of a supervised learning model leveraging image recognition, boosting product defect detection accuracy by 30%.",
+                "Performed exploratory data analysis (EDA) on structured datasets, identifying key trends and reducing data inconsistencies by 40%.",
+                "Collaborated on real-world case studies and implemented classification algorithms, achieving 92% precision in performance evaluation."
             ]
         }
     ],
     projects: [
         {
-            title: "AI-Powered Spoken English Assistant",
-            category: "NLP + Speech Recognition",
-            date: "Jul 2025",
-            description: "Developed an AI-powered spoken English assistant using Gemini API and NLP for real-time pronunciation, fluency, and grammar evaluation.",
-            tech: ["Gemini API", "NLP", "HTML", "CSS", "JS"],
+            title: "AgroMind AI – Smart Crop Recommendation System",
+            category: "Python, Scikit-learn, Gemini API",
+            date: "Feb 2025",
+            description: "Engineered a machine learning-based crop recommendation system delivering top-3 predictions using soil nutrients and climatic parameters. Integrated SHAP-powered explainable AI and Gemini API-driven agronomist insights.",
+            tech: ["Python", "Scikit-learn", "Gemini API", "SHAP"],
             metrics: [
-                "Achieved 30–35% accuracy improvement",
-                "40% rise in user engagement"
+                "Achieved 93%+ classification accuracy through feature optimization and ensemble tuning",
+                "Enabled transparent predictions with sustainability and soil improvement guidance"
             ],
             link: "#"
         },

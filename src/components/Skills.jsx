@@ -52,6 +52,16 @@ const Skills = () => {
                         ))}
                     </div>
                 </motion.div>
+
+                {/* Soft Skills */}
+                <motion.div className="skill-category" variants={categoryVariants}>
+                    <h3 className="skill-category-title">Soft Skills</h3>
+                    <div className="skill-tags">
+                        {profileData.skills.soft && profileData.skills.soft.map((skill) => (
+                            <span key={skill} className="skill-tag">{skill}</span>
+                        ))}
+                    </div>
+                </motion.div>
             </motion.div>
         </Section>
     );

@@ -7,14 +7,12 @@
     display: inline-block;
 }
 
-/* Center the underline */
+/* Left align the underline */
 .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* Move back by 50% of its own width */
+    left: 0;
     width: 60px;
     height: 4px;
     background-color: var(--accent-primary);
@@ -24,11 +22,10 @@
 .about-content {
     max-width: 800px;
     width: 100%;
-    text-align: center;
-    /* Enforce center */
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .about-text {
@@ -40,5 +37,5 @@
 
 .about-stats-grid {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
 }
